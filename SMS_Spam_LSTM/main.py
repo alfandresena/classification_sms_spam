@@ -16,7 +16,7 @@ def main():
     num_classes = 2
     dropout = 0.3
     epochs = 5
-    learning_rate = 0.0001
+    learning_rate = 0.01
     
     # Vérifier si CUDA est disponible
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
