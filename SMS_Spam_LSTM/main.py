@@ -5,7 +5,7 @@ from lstm_model import LSTMModel
 
 def main():
     # Définir le chemin du fichier
-    chemin_fichier = "../Data/spam.csv"
+    chemin_fichier = "/content/classification_sms_spam/Data/spam.csv"
     
     # Configuration des hyperparamètres
     max_sequence_length = 100
@@ -16,7 +16,7 @@ def main():
     num_classes = 2
     dropout = 0.3
     epochs = 5
-    learning_rate = 0.001
+    learning_rate = 0.0001
     
     # Vérifier si CUDA est disponible
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
