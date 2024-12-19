@@ -28,15 +28,19 @@ def preparer_donnees(data, test_size=0.2, val_size=0.1, batch_size=16):
     X = data['message'].values
     y = data['label'].values
 
+    from sklearn.model_selection import train_test_split
+
     # Train/test split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42, stratify=True)
-    
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=test_size, random_state=42, stratify=y  
+    )
+
     # Train/val split
     val_size_adjusted = val_size / (1 - test_size)
-    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, 
-                                                     test_size=val_size_adjusted, 
-                                                     random_state=42, stratify=True)
-    
+    X_train, X_val, y_train, y_val = train_test_split(
+        X_train, y_train, test_size=val_size_adjusted, random_state=42, stratify=y_train 
+    )
+
     # Création des datasets
     train_dataset = SpamDataset(X_train, y_train)
     val_dataset = SpamDataset(X_val, y_val)

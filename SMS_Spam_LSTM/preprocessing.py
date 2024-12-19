@@ -49,11 +49,11 @@ def preparer_donnees(data, max_sequence_length=100, test_size=0.2, val_size=0.1,
     
     # Étape 3 : Division des données en ensembles
     X_train, X_test, y_train, y_test = train_test_split(
-        padded_sequences, labels, test_size=test_size, random_state=42, stratify=True
+        padded_sequences, labels, test_size=test_size, random_state=42, stratify=labels
     )
     val_split = val_size / (1 - test_size)
     X_train, X_val, y_train, y_val = train_test_split(
-        X_train, y_train, test_size=val_split, random_state=42, stratify=True
+        X_train, y_train, test_size=val_split, random_state=42, stratify=y_train
     )
     
     # Conversion en tenseurs PyTorch
