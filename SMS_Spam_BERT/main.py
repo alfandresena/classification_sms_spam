@@ -5,7 +5,7 @@ from bert_model import BertModel
 
 def main():
     # Configuration
-    chemin_fichier = "/content/classification_sms_spam/Data/spam.csv"
+    chemin_fichier = "/kaggle/working/classification_sms_spam/Data/spam.csv"
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Hyperparamètres
