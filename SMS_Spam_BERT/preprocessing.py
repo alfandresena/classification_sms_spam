@@ -1,5 +1,6 @@
 from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split
 
 class SpamDataset(Dataset):
     """Dataset personnalisé pour les données de spam"""
@@ -27,8 +28,6 @@ def preparer_donnees(data, test_size=0.2, val_size=0.1, batch_size=16):
     # Division des données
     X = data['message'].values
     y = data['label'].values
-
-    from sklearn.model_selection import train_test_split
 
     # Train/test split
     X_train, X_test, y_train, y_test = train_test_split(

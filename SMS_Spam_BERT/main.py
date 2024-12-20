@@ -12,7 +12,7 @@ def main():
     num_classes = 2
     batch_size = 16
     epochs = 3
-    learning_rate = 2e-5
+    learning_rate = 2e-4
     
     print(f"Utilisation de : {device}")
     
