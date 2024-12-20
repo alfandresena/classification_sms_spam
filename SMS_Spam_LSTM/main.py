@@ -5,7 +5,7 @@ from lstm_model import LSTMModel
 
 def main():
     # Définir le chemin du fichier
-    chemin_fichier = "/content/classification_sms_spam/Data/spam.csv"
+    chemin_fichier = "/kaggle/working/classification_sms_spam/Data/spam.csv"
     
     # Configuration des hyperparamètres
     max_sequence_length = 100

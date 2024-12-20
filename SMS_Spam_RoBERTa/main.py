@@ -5,7 +5,7 @@ from roberta_model import RoBERTaModel
 
 def main():
     # Définir le chemin du fichier
-    chemin_fichier = "/content/classification_sms_spam/Data/spam.csv"
+    chemin_fichier = "/kaggle/working/classification_sms_spam/Data/spam.csv"
     
     # Configuration des hyperparamètres
     max_length = 128

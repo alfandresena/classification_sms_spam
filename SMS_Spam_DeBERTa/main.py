@@ -5,7 +5,7 @@ from deberta_model import DeBERTaModel
 
 def main():
     # Configuration
-    chemin_fichier = "/content/classification_sms_spam/Data/spam.csv"
+    chemin_fichier = "/kaggle/working/classification_sms_spam/Data/spam.csv"
     max_length = 128
     batch_size = 16
     num_classes = 2
